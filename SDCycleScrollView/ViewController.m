@@ -167,7 +167,7 @@
     
     
     OOCycleScrollView *cycleScrollView6 = [OOCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 1100, w, w*1.4) imageURLStringsGroup:imagesURLStringsT];;
-//    cycleScrollView6.pageControlStyle = OOCycleScrollViewPageContolStyleText;
+    cycleScrollView6.pageControlStyle = OOCycleScrollViewPageContolStyleText;
 //    cycleScrollView6.pageControlStyle = OOCycleScrollViewPageControlStyle.Text;
 //    cycleScrollView6.placeholderImage = [UIImage imageNamed:@"kb"];
     cycleScrollView6.autoScroll = NO;

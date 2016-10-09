@@ -35,12 +35,12 @@ import Kingfisher
 
 let kCycleScrollViewInitialPageControlDotSize = CGSizeMake(10, 10)
 let ID: String = "cycleCell"
-public enum OOCycleScrollViewPageContolAliment : Int {
+@objc public enum OOCycleScrollViewPageContolAliment : Int {
     case Right
     case Center
 }
 
-public enum OOCycleScrollViewPageContolStyle : Int {
+@objc public enum OOCycleScrollViewPageContolStyle : Int {
     case Classic
     // 系统自带经典样式
     case Animated
