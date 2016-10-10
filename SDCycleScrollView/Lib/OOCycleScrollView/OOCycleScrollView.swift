@@ -50,6 +50,11 @@ let ID: String = "cycleCell"
     case None
 }
 
+@objc public enum OOCycleScrollViewLoadingStyle : Int {
+    case None
+    case Progress
+}
+
 @objc public protocol OOCycleScrollViewDelegate : NSObjectProtocol {
     /** 点击图片回调 */
     optional func cycleScrollView(cycleScrollView: OOCycleScrollView, didSelectItemAtIndex index: Int)
@@ -188,6 +193,8 @@ public class OOCycleScrollView: UIView,UICollectionViewDelegate,UICollectionView
             mainView.scrollToItemAtIndexPath(NSIndexPath(forItem: targetIndex, inSection: 0), atScrollPosition: .None, animated: false)
         }
     }
+    
+    public var loadingStyle: OOCycleScrollViewLoadingStyle = .None
     //////////////////////  自定义样式接口  //////////////////////
     /** 轮播图片的ContentMode，默认为 UIViewContentModeScaleToFill */
     public var bannerImageViewContentMode: UIViewContentMode = .ScaleToFill
@@ -562,6 +569,8 @@ public class OOCycleScrollView: UIView,UICollectionViewDelegate,UICollectionView
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(ID, forIndexPath: indexPath) as! OOCollectionViewCell
         let itemIndex: Int = self.pageControlIndexWithCurrentCellIndex(indexPath.item)
         let imagePath = self.imagePathsGroup?[itemIndex]
+//        cell.loadingIndicator.alpha = loadingStyle == .None ? 0 : 1
+        cell.loadingIndicatorHidden = loadingStyle == .None
         if let imagePath = imagePath as? String where !self.onlyDisplayText {
             if imagePath.hasPrefix("http") {
                 cell.loadImage(NSURL(string: imagePath)!, placeholderImage: self.placeholderImage)

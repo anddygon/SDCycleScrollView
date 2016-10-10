@@ -36,9 +36,21 @@ class OOCollectionViewCell: UICollectionViewCell {
         loadingIndicator.userInteractionEnabled = false
         loadingIndicator.thicknessRatio = 0.1
         loadingIndicator.roundedCorners = 0
-        self.addSubview(loadingIndicator)
+//        self.addSubview(loadingIndicator)
         return loadingIndicator
     }()
+    var loadingIndicatorHidden:Bool {
+        get {
+            return loadingIndicator.superview == nil
+        }
+        set {
+            if newValue {
+                loadingIndicator.removeFromSuperview()
+            } else {
+                self.addSubview(loadingIndicator)
+            }
+        }
+    }
     var title: String = "" {
         didSet {
             self.titleLabel.text = "   \(title)"

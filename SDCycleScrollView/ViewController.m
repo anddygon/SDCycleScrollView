@@ -32,6 +32,7 @@
 #import "SDCycleScrollView.h"
 #import "SDCycleScrollView-Swift.h"
 
+
 @interface ViewController () <SDCycleScrollViewDelegate>
 
 @end
@@ -63,28 +64,21 @@
     
     // 情景二：采用网络图片实现
     NSArray *imagesURLStrings = @[
-                                  @"https://ss2.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a4b3d7085dee3d6d2293d48b252b5910/0e2442a7d933c89524cd5cd4d51373f0830200ea.jpg",
+                                  @"http://img6.3lian.com/c23/desk4/04/57/d/01.jpg",
                                   @"https://ss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a41eb338dd33c895a62bcb3bb72e47c2/5fdf8db1cb134954a2192ccb524e9258d1094a1e.jpg",
                                   @"http://c.hiphotos.baidu.com/image/w%3D400/sign=c2318ff84334970a4773112fa5c8d1c0/b7fd5266d0160924c1fae5ccd60735fae7cd340d.jpg"
                                   ];
     
     NSArray *imagesURLStringsT = @[
-                                   @"http://news.youth.cn/jy/201601/W020160121280834632115.jpg",
-                                   @"http://img1.imgtn.bdimg.com/it/u=1487441928,673671931&fm=21&gp=0.jpg",
-                                   @"http://img2.imgtn.bdimg.com/it/u=1149890909,2679978765&fm=21&gp=0.jpg",
-                                   @"http://img.mingxing.com/upload/attach/2012/12/30418-8UnwF7F.jpg",
-                                   @"http://www.people.com.cn/h/pic/20130510/66/10038425291787524182.jpg",
-                                   @"http://gb.cri.cn/mmsource/images/2013/06/13/85/1684209417998117637.jpg",
-                                   @"http://attachment.van698.com/forum/201110/06/053843u35m0sus7use9p9l.jpg",
-                                   @"http://news.sosol.com.cn/news/html/shtml/NewsImage/20100528/20100528104846973.jpg",
-                                   @"http://static.ettoday.net/images/159/d159493.jpg",
-                                   @"http://entdata-pic.stor.sinaapp.com/2014121216/548aad52417e211111111111111111111111111111111.jpg",
-                                   @"http://www.gz2010.cn/uploads/pic/201604/30_1461720773_4989.png",
-                                   @"http://image.cnwest.com/attachement/jpg/site1/20080728/001372d8a0ba09f7c32b12.jpg",
-                                   @"https://s.yimg.com/ny/api/res/1.2/AQJYxbv99Qe.VYePh1HUFg--/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9NjAwO2g9ODAwO2lsPXBsYW5l/http://media.zenfs.com/zh-Hant_TW/News/yahoobeauty/20150707185437_bingo_522_641731.jpg"
+                                   @"http://img6.3lian.com/c23/desk4/04/57/d/01.jpg",
+                                   @"http://img-arch.pconline.com.cn/images/upload/upc/tx/wallpaper/1210/25/c0/14647938_1351135314344.jpg",
+                                   @"http://img5.duitang.com/uploads/item/201408/19/20140819113714_d4SPW.jpeg",
+                                   @"http://img5.duitang.com/uploads/item/201408/19/20140819113643_f232X.jpeg",
+                                   @"http://img4.duitang.com/uploads/item/201408/19/20140819113511_Ai3ix.jpeg",
+                                   @"http://tupian.enterdesk.com/2013/lxy/09/23/4/7.jpg",
                                   ];
     
-    
+    [OOCycleScrollView clearImagesCache];
     
     // 情景三：图片配文字
     NSArray *titles = @[@"新建交流QQ群：185534916 ",
@@ -112,8 +106,8 @@
 // >>>>>>>>>>>>>>>>>>>>>>>>> demo轮播图2 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     
     // 网络加载 --- 创建带标题的图片轮播器
-    SDCycleScrollView *cycleScrollView2 = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 280, w, 180) delegate:self placeholderImage:[UIImage imageNamed:@"placeholder"]];
-    
+    OOCycleScrollView *cycleScrollView2 = [OOCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 280, w, 180) delegate:self placeholderImage:nil];
+//    cycleScrollView2.loadingStyle = OOCycleScrollViewLoadingStyleProgress;
     cycleScrollView2.pageControlAliment = SDCycleScrollViewPageContolAlimentRight;
     cycleScrollView2.titlesGroup = titles;
     cycleScrollView2.currentPageDotColor = [UIColor whiteColor]; // 自定义分页控件小圆标颜色
@@ -170,6 +164,7 @@
     cycleScrollView6.pageControlStyle = OOCycleScrollViewPageContolStyleText;
 //    cycleScrollView6.pageControlStyle = OOCycleScrollViewPageControlStyle.Text;
 //    cycleScrollView6.placeholderImage = [UIImage imageNamed:@"kb"];
+    cycleScrollView6.loadingStyle = OOCycleScrollViewLoadingStyleProgress;
     cycleScrollView6.autoScroll = NO;
     [demoContainerView addSubview:cycleScrollView6];
     
