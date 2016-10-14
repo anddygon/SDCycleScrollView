@@ -97,7 +97,7 @@ public class OOCycleScrollView: UIView,UICollectionViewDelegate,UICollectionView
         didSet {
             if let imageURLStringsGroup = imageURLStringsGroup {
                 self.imagePathsGroup = imageURLStringsGroup.map {
-                    $0 is String ? $0 as! String : ($0 as! NSURL).absoluteString
+                    $0 is String ? $0 as! String : ($0 as! NSURL).absoluteString!
                 }.filter { !$0.isEmpty }
             }
         }

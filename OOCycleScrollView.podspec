@@ -24,7 +24,8 @@ s.source_files  = "SDCycleScrollView/Lib/OOCycleScrollView/**/*.swift"
 
 s.requires_arc = true
 
-s.dependency 'Kingfisher'
+s.dependency 'Kingfisher','~> 2.6'
 s.dependency 'DACircularProgress'
+s.pod_target_xcconfig = { 'SWIFT_VERSION' => '2.3' }
 
 end

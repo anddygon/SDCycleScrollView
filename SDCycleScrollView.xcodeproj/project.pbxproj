@@ -20,7 +20,6 @@
 		9900D17A1ABEB2490077A6CB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9900D1791ABEB2490077A6CB /* ViewController.m */; };
 		9900D17F1ABEB2490077A6CB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9900D17E1ABEB2490077A6CB /* Images.xcassets */; };
 		9900D1821ABEB2490077A6CB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9900D1801ABEB2490077A6CB /* LaunchScreen.xib */; };
-		9900D18E1ABEB2490077A6CB /* SDCycleScrollViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9900D18D1ABEB2490077A6CB /* SDCycleScrollViewTests.m */; };
 		9900D1A01ABEB41B0077A6CB /* h2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9900D19C1ABEB41B0077A6CB /* h2.jpg */; };
 		9900D1A21ABEB41B0077A6CB /* h4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9900D19E1ABEB41B0077A6CB /* h4.jpg */; };
 		999C10981AC14F3B00C11CDB /* h3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 999C10961AC14F3B00C11CDB /* h3.jpg */; };
@@ -60,16 +59,6 @@
 		9B55285C1D422F5900EFDD66 /* UIView+OOExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5528541D422F5900EFDD66 /* UIView+OOExtension.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		9900D1881ABEB2490077A6CB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9900D1661ABEB2490077A6CB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9900D16D1ABEB2490077A6CB;
-			remoteInfo = SDCycleScrollView;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		15EF1B05B2FB427CA81955F2 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48377B8D1C1027F5007B8C21 /* DemoVCWithXib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVCWithXib.h; sourceTree = "<group>"; };
@@ -91,7 +80,6 @@
 		9900D1791ABEB2490077A6CB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9900D17E1ABEB2490077A6CB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9900D1811ABEB2490077A6CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		9900D1871ABEB2490077A6CB /* SDCycleScrollViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDCycleScrollViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9900D18C1ABEB2490077A6CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9900D18D1ABEB2490077A6CB /* SDCycleScrollViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDCycleScrollViewTests.m; sourceTree = "<group>"; };
 		9900D19C1ABEB41B0077A6CB /* h2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = h2.jpg; sourceTree = "<group>"; };
@@ -168,13 +156,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9900D1841ABEB2490077A6CB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -237,7 +218,6 @@
 			isa = PBXGroup;
 			children = (
 				9900D16E1ABEB2490077A6CB /* SDCycleScrollView.app */,
-				9900D1871ABEB2490077A6CB /* SDCycleScrollViewTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -421,24 +401,6 @@
 			productReference = 9900D16E1ABEB2490077A6CB /* SDCycleScrollView.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9900D1861ABEB2490077A6CB /* SDCycleScrollViewTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9900D1941ABEB2490077A6CB /* Build configuration list for PBXNativeTarget "SDCycleScrollViewTests" */;
-			buildPhases = (
-				9900D1831ABEB2490077A6CB /* Sources */,
-				9900D1841ABEB2490077A6CB /* Frameworks */,
-				9900D1851ABEB2490077A6CB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9900D1891ABEB2490077A6CB /* PBXTargetDependency */,
-			);
-			name = SDCycleScrollViewTests;
-			productName = SDCycleScrollViewTests;
-			productReference = 9900D1871ABEB2490077A6CB /* SDCycleScrollViewTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -452,10 +414,7 @@
 					9900D16D1ABEB2490077A6CB = {
 						CreatedOnToolsVersion = 6.1;
 						DevelopmentTeam = V4Q779DR3D;
-					};
-					9900D1861ABEB2490077A6CB = {
-						CreatedOnToolsVersion = 6.1;
-						TestTargetID = 9900D16D1ABEB2490077A6CB;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -473,7 +432,6 @@
 			projectRoot = "";
 			targets = (
 				9900D16D1ABEB2490077A6CB /* SDCycleScrollView */,
-				9900D1861ABEB2490077A6CB /* SDCycleScrollViewTests */,
 			);
 		};
 /* End PBXProject section */
@@ -496,13 +454,6 @@
 				9900D17F1ABEB2490077A6CB /* Images.xcassets in Resources */,
 				485B54791C3A196C001944FA /* pageControlCurrentDot@3x.png in Resources */,
 				9900D1A01ABEB41B0077A6CB /* h2.jpg in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9900D1851ABEB2490077A6CB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,7 +487,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		64A63EE316C9776C7B85D7D3 /* [CP] Copy Pods Resources */ = {
@@ -600,23 +551,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9900D1831ABEB2490077A6CB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9900D18E1ABEB2490077A6CB /* SDCycleScrollViewTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		9900D1891ABEB2490077A6CB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9900D16D1ABEB2490077A6CB /* SDCycleScrollView */;
-			targetProxy = 9900D1881ABEB2490077A6CB /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9900D1801ABEB2490077A6CB /* LaunchScreen.xib */ = {
@@ -720,6 +655,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -736,40 +672,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
-			};
-			name = Release;
-		};
-		9900D1951ABEB2490077A6CB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = SDCycleScrollViewTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SDCycleScrollView.app/SDCycleScrollView";
-			};
-			name = Debug;
-		};
-		9900D1961ABEB2490077A6CB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = SDCycleScrollViewTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SDCycleScrollView.app/SDCycleScrollView";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -790,15 +693,6 @@
 			buildConfigurations = (
 				9900D1921ABEB2490077A6CB /* Debug */,
 				9900D1931ABEB2490077A6CB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9900D1941ABEB2490077A6CB /* Build configuration list for PBXNativeTarget "SDCycleScrollViewTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9900D1951ABEB2490077A6CB /* Debug */,
-				9900D1961ABEB2490077A6CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
