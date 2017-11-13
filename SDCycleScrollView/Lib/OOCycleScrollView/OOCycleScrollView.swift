@@ -588,9 +588,9 @@ open class OOCycleScrollView: UIView,UICollectionViewDelegate,UICollectionViewDa
         if let titlesGroup = titlesGroup , titlesGroup.count > 0 && itemIndex < titlesGroup.count {
             cell.title = titlesGroup[itemIndex] as! String
         }
-        cell.loadingIndicator.isHidden = !isShowProgressOfImageLoad
         
         if !cell.hasConfigured {
+            cell.loadingIndicator.isHidden = !isShowProgressOfImageLoad
             cell.titleLabelBackgroundColor = self.titleLabelBackgroundColor
             cell.titleLabelHeight = self.titleLabelHeight
             cell.titleLabelTextColor = self.titleLabelTextColor
