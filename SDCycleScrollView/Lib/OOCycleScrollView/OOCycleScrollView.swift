@@ -223,6 +223,8 @@ open class OOCycleScrollView: UIView,UICollectionViewDelegate,UICollectionViewDa
             self.setupPageControl()
         }
     }
+    /** 是否显示图片加载进度 */
+    open var isShowProgressOfImageLoad = true
 
     /** 分页控件位置 */
     open var pageControlAliment: OOCycleScrollViewPageContolAliment = .center
@@ -586,6 +588,8 @@ open class OOCycleScrollView: UIView,UICollectionViewDelegate,UICollectionViewDa
         if let titlesGroup = titlesGroup , titlesGroup.count > 0 && itemIndex < titlesGroup.count {
             cell.title = titlesGroup[itemIndex] as! String
         }
+        cell.loadingIndicator.isHidden = !isShowProgressOfImageLoad
+        
         if !cell.hasConfigured {
             cell.titleLabelBackgroundColor = self.titleLabelBackgroundColor
             cell.titleLabelHeight = self.titleLabelHeight
